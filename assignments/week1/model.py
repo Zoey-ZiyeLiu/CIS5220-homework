@@ -1,6 +1,4 @@
 import numpy as np
-from sklearn.metrics import mean_squared_error
-import copy
 
 
 class LinearRegression:
@@ -14,7 +12,7 @@ class LinearRegression:
     def __init__(self):
         # raise NotImplementedError()
         self.b = 0
-        self.w = np.ndarray(0)
+        self.w = np.array([0])
         self.lr = 0
         self.epochs = 0
 
@@ -41,7 +39,7 @@ class LinearRegression:
         w = np.dot(np.dot(np.linalg.inv(np.dot(X_new.T, X_new)), X_new.T), y)
         self.w = w[:-1:]
         self.b = w[-1]
-        # print(self.w)
+        # print(self.b)
         return
 
     def predict(self, X: np.ndarray) -> np.ndarray:
