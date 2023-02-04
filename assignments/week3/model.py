@@ -33,10 +33,10 @@ class MLP(torch.nn.Module):
         in_dim = input_size
         self.initializer = initializer
         for i in range(hidden_count - 1):
-            out_dim = hidden_size
-            l = torch.nn.Linear(in_dim, out_dim)
-            self.initializer(l.weight)
-            self.layers += [l]
+            out_dim = hidden_size // 2
+            lay = torch.nn.Linear(in_dim, out_dim)
+            self.initializer(lay.weight)
+            self.layers += [lay]
             in_dim = out_dim
         self.out = torch.nn.Linear(in_dim, num_classes)
 
