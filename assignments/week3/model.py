@@ -37,7 +37,7 @@ class MLP(torch.nn.Module):
             lay = torch.nn.Linear(in_dim, out_dim)
             self.initializer(lay.weight)
             self.layers += [lay]
-            self.layers += [torch.nn.Dropout(0.1)]
+            self.layers += [torch.nn.Dropout(0.15),torch.nn.BatchNorm1d(out_dim)]
             in_dim = out_dim
         self.out = torch.nn.Linear(in_dim, num_classes)
 
