@@ -15,7 +15,7 @@ class CustomLRScheduler(_LRScheduler):
         last_epoch=-1,
         initial_lr=0.01,
         eta_min=0,
-        T_max=2,
+        T_max=1.5,
     ):
         """
         Create a new scheduler.
