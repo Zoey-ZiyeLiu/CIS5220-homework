@@ -1,12 +1,12 @@
-// {
-//     "assignment_name": "Assignment 1",
-//     "contributors": [
-//         {
-//             "name": "Ziye Liu",
-//             "pennkey": "liuziye"
-//         }
-//     ],
-//     "sources": [
-//         "CIS5190 Lecture 3"
-//     ]
-// }
+{
+    "assignment_name": "Assignment 1",
+    "contributors": [
+        {
+            "name": "Ziye Liu",
+            "pennkey": "liuziye"
+        }
+    ],
+    "sources": [
+        "CIS5190 Lecture 3"
+    ]
+}
