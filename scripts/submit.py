@@ -91,7 +91,7 @@ def load_submission_json(path: str):
         dict: The contents of the submission.json file.
     """
     with open(path, "r") as f:
-        meta = json.load(f, strict=False)
+        meta = json.load(f, strict=True)
         assert "assignment_name" in meta, "Missing assignment_name in submission.json"
         assert "contributors" in meta, "Missing contributors in submission.json"
         assert "sources" in meta, "Missing sources in submission.json"
